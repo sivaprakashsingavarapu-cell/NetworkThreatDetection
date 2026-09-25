@@ -227,7 +227,32 @@ For malicious traffic:
 {
     "prediction": "Web Attack - XSS"
 }
-Dashboard
+
+## Dashboard
+
+The web dashboard provides:
+
+- Prediction interface
+- Benign/threat result display
+- Prediction history
+- Total predictions
+- Benign traffic count
+- Threat count
+- Threat rate
+- System status
+- Automatic refresh
+
+### Dashboard
+
+![Network Threat Detection Dashboard](dashboard.png)
+
+### Threat Detection Result
+
+![Threat Detection Result](threat-detection.png)
+
+### Prediction History
+
+![Prediction History](prediction-history.png)
 
 The web dashboard provides:
 
