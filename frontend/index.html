@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Network Threat Detection</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Network Threat Detection</h1>
+
+<p>AI-Powered Network Security Monitoring System</p>
+
+<div class="system-status">
+    <span class="status-dot"></span>
+    <span>System Online</span>
+</div>
+
+<p id="lastUpdated">
+    Last updated: --:--:--
+</p>
+
+        <div class="card">
+
+            <h2>Network Traffic Analysis</h2>
+            <div class="stats-container">
+
+    <div class="stat-card">
+        <h3>Total Predictions</h3>
+        <p id="totalPredictions">0</p>
+    </div>
+
+    <div class="stat-card">
+        <h3>Benign Traffic</h3>
+        <p id="benignPredictions">0</p>
+    </div>
+
+    <div class="stat-card">
+        <h3>Threats Detected</h3>
+        <p id="threatPredictions">0</p>
+    </div>
+    
+    <div class="stat-card">
+    <h3>Threat Rate</h3>
+    <p id="threatRate">0%</p>
+</div>
+
+</div>
+
+            <div class="input-grid">
+
+                <div>
+                    <label>Init Fwd Win Bytes</label>
+                    <input type="number" id="Init Fwd Win Bytes" value="0">
+                </div>
+
+                <div>
+                    <label>Bwd Packet Length Mean</label>
+                    <input type="number" id="Bwd Packet Length Mean" value="0">
+                </div>
+
+                <div>
+                    <label>Bwd Packet Length Std</label>
+                    <input type="number" id="Bwd Packet Length Std" value="0">
+                </div>
+
+                <div>
+                    <label>Fwd IAT Mean</label>
+                    <input type="number" id="Fwd IAT Mean" value="0">
+                </div>
+
+                <div>
+                    <label>Flow IAT Max</label>
+                    <input type="number" id="Flow IAT Max" value="0">
+                </div>
+
+                <div>
+                    <label>Flow IAT Mean</label>
+                    <input type="number" id="Flow IAT Mean" value="0">
+                </div>
+
+                <div>
+                    <label>Bwd Packets/s</label>
+                    <input type="number" id="Bwd Packets/s" value="0">
+                </div>
+
+                <div>
+                    <label>Avg Bwd Segment Size</label>
+                    <input type="number" id="Avg Bwd Segment Size" value="0">
+                </div>
+
+                <div>
+                    <label>Bwd Header Length</label>
+                    <input type="number" id="Bwd Header Length" value="0">
+                </div>
+
+                <div>
+                    <label>Fwd Packet Length Max</label>
+                    <input type="number" id="Fwd Packet Length Max" value="0">
+                </div>
+
+                <div>
+                    <label>Fwd IAT Max</label>
+                    <input type="number" id="Fwd IAT Max" value="0">
+                </div>
+
+                <div>
+                    <label>Init Bwd Win Bytes</label>
+                    <input type="number" id="Init Bwd Win Bytes" value="0">
+                </div>
+
+                <div>
+                    <label>Packet Length Variance</label>
+                    <input type="number" id="Packet Length Variance" value="0">
+                </div>
+
+                <div>
+                    <label>Fwd IAT Min</label>
+                    <input type="number" id="Fwd IAT Min" value="0">
+                </div>
+
+                <div>
+                    <label>Fwd IAT Total</label>
+                    <input type="number" id="Fwd IAT Total" value="0">
+                </div>
+
+                <div>
+                    <label>Flow Packets/s</label>
+                    <input type="number" id="Flow Packets/s" value="0">
+                </div>
+
+                <div>
+                    <label>PSH Flag Count</label>
+                    <input type="number" id="PSH Flag Count" value="0">
+                </div>
+
+                <div>
+                    <label>Fwd Header Length</label>
+                    <input type="number" id="Fwd Header Length" value="0">
+                </div>
+
+                <div>
+                    <label>Bwd Packets Length Total</label>
+                    <input type="number" id="Bwd Packets Length Total" value="0">
+                </div>
+
+                <div>
+                    <label>Bwd Packet Length Max</label>
+                    <input type="number" id="Bwd Packet Length Max" value="0">
+                </div>
+
+            </div>
+
+            <button onclick="predictThreat()">
+    Predict Threat
+</button>
+
+<button onclick="resetInputs()">
+    Reset Inputs
+</button>
+
+<div id="result" class="result-box">
+    Prediction will appear here
+</div>
+
+<hr>
+
+<h2>Prediction History</h2>
+
+<button onclick="loadHistory()">
+    View History
+</button>
+
+<button onclick="refreshDashboard()">
+    Refresh Dashboard
+</button>
+
+<button onclick="clearHistory()">
+    Clear History
+</button>
+
+<table id="historyTable">
+
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Prediction</th>
+            <th>Time</th>
+        </tr>
+    </thead>
+
+    <tbody id="historyBody">
+    </tbody>
+
+</table>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
